@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v2h-1l-ZFF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lauch View Controller-->
+        <scene sceneID="fIV-xy-Wdq">
+            <objects>
+                <viewController id="v2h-1l-ZFF" customClass="LauchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2M9-Hg-eeB"/>
+                        <viewControllerLayoutGuide type="bottom" id="43W-hR-VgW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EVy-aY-6NZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-bg" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-iM-VKF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Fko-8j-vOw">
+                                <rect key="frame" x="128" y="288" width="119.5" height="91"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号2.1.3（21911）" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-Fd-RW7">
+                                <rect key="frame" x="128" y="394" width="119.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HEF-Fd-RW7" firstAttribute="centerX" secondItem="Fko-8j-vOw" secondAttribute="centerX" id="C5d-hn-FUk"/>
+                            <constraint firstItem="Fko-8j-vOw" firstAttribute="centerY" secondItem="EVy-aY-6NZ" secondAttribute="centerY" id="E9n-Er-3vG"/>
+                            <constraint firstItem="Fko-8j-vOw" firstAttribute="centerX" secondItem="EVy-aY-6NZ" secondAttribute="centerX" id="NTY-VM-LeU"/>
+                            <constraint firstItem="TDe-iM-VKF" firstAttribute="top" secondItem="EVy-aY-6NZ" secondAttribute="top" id="PP5-lh-8xv"/>
+                            <constraint firstAttribute="trailing" secondItem="TDe-iM-VKF" secondAttribute="trailing" id="Pxo-OZ-B6M"/>
+                            <constraint firstItem="HEF-Fd-RW7" firstAttribute="top" secondItem="Fko-8j-vOw" secondAttribute="bottom" constant="15" id="fl5-XE-e7F"/>
+                            <constraint firstItem="TDe-iM-VKF" firstAttribute="leading" secondItem="EVy-aY-6NZ" secondAttribute="leading" id="pvk-Wq-vRI"/>
+                            <constraint firstItem="HEF-Fd-RW7" firstAttribute="width" secondItem="Fko-8j-vOw" secondAttribute="width" id="u8n-Sn-dqi"/>
+                            <constraint firstAttribute="bottom" secondItem="TDe-iM-VKF" secondAttribute="bottom" id="vNp-oK-KtL"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="banbenLabel" destination="HEF-Fd-RW7" id="AoE-6I-cpV"/>
+                        <outlet property="lauchLogo" destination="Fko-8j-vOw" id="va9-Dk-W9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEh-cD-G8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.5" y="347.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch-bg" width="375" height="667"/>
+        <image name="launch-logo" width="119" height="91"/>
+    </resources>
+</document>

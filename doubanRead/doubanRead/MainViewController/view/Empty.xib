@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MdK-kG-KT8" customClass="navigationbar">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD2-AR-hc4">
+                    <rect key="frame" x="316" y="0.0" width="59" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="g3v-Lm-S6Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" red="0.42432461859999998" green="1" blue="0.65711887359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="取消" image="ic_close">
+                        <color key="titleColor" red="0.11775417659444809" green="0.6955636771236785" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didclickcancel:" destination="MdK-kG-KT8" eventType="touchUpInside" id="zJV-yb-TiA"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" placeholder="自出版／图书／杂志" translatesAutoresizingMaskIntoConstraints="NO" id="xP1-tI-k0S">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTQ-MS-1VO">
+                    <rect key="frame" x="345" y="11" width="20" height="22"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="QKg-qo-V9y"/>
+                    </constraints>
+                    <state key="normal" image="ic_category"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xP1-tI-k0S" firstAttribute="top" secondItem="MdK-kG-KT8" secondAttribute="top" id="4V7-eU-2rD"/>
+                <constraint firstItem="xP1-tI-k0S" firstAttribute="leading" secondItem="MdK-kG-KT8" secondAttribute="leading" id="7EZ-dg-l6i"/>
+                <constraint firstAttribute="trailing" secondItem="JTQ-MS-1VO" secondAttribute="trailing" constant="10" id="8Xf-Iu-SFh"/>
+                <constraint firstAttribute="trailing" secondItem="xP1-tI-k0S" secondAttribute="trailing" constant="40" id="Adm-k1-Lcu"/>
+                <constraint firstItem="JTQ-MS-1VO" firstAttribute="top" secondItem="MdK-kG-KT8" secondAttribute="top" constant="11" id="MrY-2P-QWt"/>
+                <constraint firstItem="QD2-AR-hc4" firstAttribute="top" secondItem="MdK-kG-KT8" secondAttribute="top" id="NXc-mA-AOb"/>
+                <constraint firstAttribute="bottom" secondItem="JTQ-MS-1VO" secondAttribute="bottom" constant="11" id="W0w-k3-aCJ"/>
+                <constraint firstAttribute="bottom" secondItem="QD2-AR-hc4" secondAttribute="bottom" id="aGg-cb-lg6"/>
+                <constraint firstAttribute="trailing" secondItem="QD2-AR-hc4" secondAttribute="trailing" id="s8P-MZ-Hka"/>
+                <constraint firstAttribute="bottom" secondItem="xP1-tI-k0S" secondAttribute="bottom" id="vUT-LW-Gia"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="QD2-AR-hc4" id="xZ8-lN-gH0"/>
+                <outlet property="change" destination="Adm-k1-Lcu" id="kiU-BA-HN1"/>
+                <outlet property="noticeButton" destination="JTQ-MS-1VO" id="Cnf-lz-6iS"/>
+                <outlet property="searchBar" destination="xP1-tI-k0S" id="2Lx-Ps-jlv"/>
+            </connections>
+            <point key="canvasLocation" x="263.5" y="87"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_category" width="20" height="18"/>
+        <image name="ic_close" width="15" height="15"/>
+    </resources>
+</document>

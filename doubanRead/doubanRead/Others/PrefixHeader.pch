@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  doubanRead
+//
+//  Created by 杜守鹏 on 16/1/27.
+//  Copyright © 2016年 杜守鹏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+UIView___Extension.h"
+#import "UIImage+UIImage___extionsion.h"
+
+#ifdef DEBUG // 处于开发阶段
+#define DPLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define DPLog(...)
+#endif
+//titleScrollView上显示的button数以及设置contentscrollView的contentSize
+#define TitleCounts 3
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//判断tabbar时候所用属性
+
+#define kNavH 64
+#define kTabbarH 44
+// 结束拖拽判断的中心点位置
+#define kTabbarMid (kNavH - kTabbarH * 0.4)
+
+// 隐藏时tabbar的y值
+#define kTabbarHiddenY kNavH - kTabbarH
+// 完全显示的时候tabbar的y值
+#define kTabbarShowY kNavH
+
+#endif /* PrefixHeader_pch */

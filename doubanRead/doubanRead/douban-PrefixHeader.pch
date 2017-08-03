@@ -1,0 +1,22 @@
+//
+//  douban-PrefixHeader.pch
+//  doubanRead
+//
+//  Created by 杜守鹏 on 16/1/13.
+//  Copyright © 2016年 杜守鹏. All rights reserved.
+//
+
+#ifndef douban_PrefixHeader_pch
+#define douban_PrefixHeader_pch
+#import "UIView+UIView___Extension.h"
+
+
+#ifdef DEBUG // 处于开发阶段
+#define DPLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define DPLog(...)
+#endif
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#endif /* douban_PrefixHeader_pch */
